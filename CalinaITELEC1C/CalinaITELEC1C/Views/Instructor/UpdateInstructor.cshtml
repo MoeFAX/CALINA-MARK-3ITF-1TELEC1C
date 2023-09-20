@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Instructor;
+<h1>Update Instructor</h1>
+<form class='p-2 row gx-3 gy-2 align-items-center' method="POST" asp-action="UpdateInstructor" asp-controller="Instructor">
+    <div class="form-group">
+        <label asp-for="InstructorId" hidden>Instructor ID</label>
+        <input class="form-control" asp-for="InstructorId" placeholder="Enter Instructor ID" hidden>
+    </div>
+    <div class="form-group">
+        <label asp-for="FirstName">First Name</label>
+        <input class="form-control" asp-for="FirstName" placeholder="Enter first name">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LastName">Last Name</label>
+        <input class="form-control" asp-for="LastName" placeholder="Enter last name">
+    </div>
+    <div class="form-group">
+        <label asp-for="IsTenured">Status</label>
+        <select class="form-control" asp-for="IsTenured">
+            <option value="true">Full-Time</option>
+            <option value="false">Part-Time</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="InstructorRank">Instructor Rank</label>
+        <select class="form-control" asp-items="@Html.GetEnumSelectList(typeof(Rank))" asp-for="InstructorRank">
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="HiringDate">Date Hired</label>
+        <input class="form-control" asp-for="HiringDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" onclick="history.back()" class="btn btn-primary-secondary">Cancel</button>
+</form>

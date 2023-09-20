@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Student;
+<h1>Update Student</h1>
+<form class='p-2 row gx-3 gy-2 align-items-center' method="POST" asp-action="UpdateStudent" asp-controller="Student">
+    <div class="form-group">
+        <label asp-for="StudentId" hidden>Student ID</label>
+        <input class="form-control" asp-for="StudentId" placeholder="Enter Student ID" hidden>
+    </div>
+    <div class="form-group">
+        <label asp-for="FirstName">Name</label>
+        <input class="form-control" asp-for="FirstName" placeholder="Enter first name">
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="LastName">Name</label>
+        <input class="form-control" asp-for="LastName" placeholder="Enter last name">
+    </div>
+    <div class="form-group">
+        <label asp-for="Email">Email address</label>
+        <input class="form-control" asp-for="Email" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label asp-for="GPA">GPA</label>
+        <input class="form-control" asp-for="GPA" placeholder="Enter GPA">
+    </div>
+    <div class="form-group">
+        <label asp-for="StudentCourse">Course</label>
+        <select class="form-control" asp-items="@Html.GetEnumSelectList(typeof(Course))" asp-for="StudentCourse">
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="AdmissionDate">Date Enrolled</label>
+        <input class="form-control" asp-for="AdmissionDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" onclick="history.back()" class="btn btn-primary-secondary">Cancel</button>
+</form>

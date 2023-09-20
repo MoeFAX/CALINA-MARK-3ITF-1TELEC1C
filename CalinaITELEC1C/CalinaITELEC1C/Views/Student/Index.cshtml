@@ -1,0 +1,63 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Student>;
+<h1>Student List</h1>
+<input class="btn btn-primary" type="button" value="Add Student"
+       onclick="@("window.location.href='" + @Url.Action("addstudent", "Student") + "'");" />
+<table class="table table-dark">
+    <tr>
+        <th colspan="10">Student</th>
+    </tr>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>GPA</td>
+        <td>Admission Date</td>
+        <td>Student Course</td>
+        <td>ID</td>
+        <td>Email</td>
+        <td>Details</td>
+        <td>Update</td>
+    </tr>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.FirstName</td>
+            <td>@student.LastName</td>
+            <td>@student.GPA</td>
+            <td>@student.AdmissionDate</td>
+            <td>@student.StudentCourse</td>
+            <td>@student.StudentId</td>
+            <td>@student.Email</td>
+            <td><a asp-action="ShowDetail" asp-route-id="@student.StudentId">Show Details</a></td>
+            <td><a asp-action="UpdateStudent" asp-route-id="@student.StudentId">Update</a></td>
+        </tr>
+
+    }
+</table>
+<!--
+
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td>@ViewBag.StudentName</td>
+        </tr>
+        <tr>
+            <th>Date Enrolled:</th>
+            <td>@ViewBag.DateEnrolled</td>
+        </tr>
+        <tr>
+            <th>StudentID:</th>
+            <td>@ViewBag.StudentId</td>
+        </tr>
+        <tr>
+            <th>Date Enrolled:</th>
+            <td>@ViewBag.DateEnrolled</td>
+        </tr>
+    </table>
+
+-->
+    
