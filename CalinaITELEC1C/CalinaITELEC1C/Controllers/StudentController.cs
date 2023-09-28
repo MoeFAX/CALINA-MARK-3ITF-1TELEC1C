@@ -1,32 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CalinaITELEC1C.Models;
+using CalinaITELEC1C.Services;
+
 namespace CalinaITELEC1C.Controllers
 {
     public class StudentController : Controller
     {
-        List<Student> StudentList = new List<Student>
+        private readonly IMyFakeDataService _dummyData;
+
+        public StudentController(IMyFakeDataService dummyData) //constructor
         {
-            new Student()
-            {
-                 FirstName= "Mark Gabriel", LastName= "Calina", GPA = 1.50, AdmissionDate = DateTime.Now, StudentCourse=Course.BSIT, Email= "markgabriel.calina.cics@ust.edu.ph", StudentId=1
-            },
-            new Student()
-            {
-                 FirstName= "Kanye", LastName= "West", GPA = 2.75, AdmissionDate = DateTime.Now, StudentCourse=Course.BSCS, Email= "kanye.west.cics@ust.edu.ph", StudentId=2
-            },
-            new Student()
-            {
-                 FirstName= "Taylor", LastName= "Swift", GPA = 2.00, AdmissionDate = DateTime.Now, StudentCourse=Course.BSIS, Email= "taylor.swift.cics@ust.edu.ph", StudentId=3
-            }
-        };
+            _dummyData = dummyData;
+        }
 
         public IActionResult Index()
         {
-            return View(StudentList);
+            return View(_dummyData.StudentList);
         }
         public IActionResult ShowDetail(int id)
         {
-            Student? student = StudentList.FirstOrDefault(st => st.StudentId == id);
+            Student? student = _dummyData.StudentList.FirstOrDefault(st => st.StudentId == id);
 
             if (student != null)
                 return View(student);
@@ -41,14 +34,14 @@ namespace CalinaITELEC1C.Controllers
         [HttpPost]
         public IActionResult AddStudent(Student newStudent)
         {
-            StudentList.Add(newStudent);
-            return View("Index", StudentList);
+            _dummyData.StudentList.Add(newStudent);
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
         public IActionResult UpdateStudent(int id)
         {
-            Student? student = StudentList.FirstOrDefault(st => st.StudentId == id);
+            Student? student = _dummyData.StudentList.FirstOrDefault(st => st.StudentId == id);
 
             if (student != null)
                 return View(student);
@@ -58,7 +51,7 @@ namespace CalinaITELEC1C.Controllers
         [HttpPost]
         public IActionResult UpdateStudent(Student studentChanges)
         {
-            Student? student = StudentList.FirstOrDefault(st => st.StudentId == studentChanges.StudentId);
+            Student? student = _dummyData.StudentList.FirstOrDefault(st => st.StudentId == studentChanges.StudentId);
             if(student != null)
             {
                 student.FirstName = studentChanges.FirstName;
@@ -68,9 +61,30 @@ namespace CalinaITELEC1C.Controllers
                 student.AdmissionDate = studentChanges.AdmissionDate;
                 student.GPA = studentChanges.GPA;
             }
-            return View("Index", StudentList);
+            return RedirectToAction("Index");
         }
 
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Student? student = _dummyData.StudentList.FirstOrDefault(st => st.StudentId == id);
+
+            if (student != null)
+                return View(student);
+
+            return NotFound();
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Student newStudent)
+        {
+            Student? student = _dummyData.StudentList.FirstOrDefault(st => st.StudentId == newStudent.StudentId);
+            if (student != null)
+                _dummyData.StudentList.Remove(student);
+
+            return RedirectToAction("Index");
+        }
     }
         /*
         public IActionResult Index()

@@ -9,69 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CalinaITELEC1C
 build_property.RootNamespace = CalinaITELEC1C
-build_property.ProjectDir = C:\Users\MAC\source\repos\CalinaITELEC1C\CalinaITELEC1C\
+build_property.ProjectDir = D:\GITHUBB\CALINA-MARK-3ITF-1TELEC1C\CalinaITELEC1C\CalinaITELEC1C\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\MAC\source\repos\CalinaITELEC1C\CalinaITELEC1C
+build_property.MSBuildProjectDirectory = D:\GITHUBB\CALINA-MARK-3ITF-1TELEC1C\CalinaITELEC1C\CalinaITELEC1C
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Home/Index.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Home/Privacy.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Instructor/AddInstructor.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Instructor/AddInstructor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxBZGRJbnN0cnVjdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Instructor/Index.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Instructor/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Instructor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Instructor/ShowDetail.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Instructor/ShowDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxTaG93RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Instructor/UpdateInstructor.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Instructor/UpdateInstructor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxVcGRhdGVJbnN0cnVjdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Shared/Error.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Student/AddStudent.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Student/AddStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxBZGRTdHVkZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Student/Index.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Student/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Student/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Student/ShowDetail.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Student/ShowDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTaG93RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Student/UpdateStudent.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Student/UpdateStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxVcGRhdGVTdHVkZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/_ViewImports.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/_ViewStart.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MAC/source/repos/CalinaITELEC1C/CalinaITELEC1C/Views/Shared/_Layout.cshtml]
+[D:/GITHUBB/CALINA-MARK-3ITF-1TELEC1C/CalinaITELEC1C/CalinaITELEC1C/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-kuz2l8nc0q

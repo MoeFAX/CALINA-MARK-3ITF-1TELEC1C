@@ -1,33 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CalinaITELEC1C.Models;
+using CalinaITELEC1C.Services;
+
 namespace CalinaITELEC1C.Controllers
 {
     public class InstructorController : Controller
     {
-        
-            List<Instructor> InstructorsList = new List<Instructor>
-            {
-                new Instructor()
-                {
-                    FirstName= "Gabriel", LastName= "Montano", InstructorRank = Rank.Professor, HiringDate = DateTime.Now, IsTenured= false, InstructorId=1
-                },
-                new Instructor()
-                {
-                    FirstName= "Ron", LastName= "Antonio", InstructorRank = Rank.AssociateProfessor, HiringDate = DateTime.Now, IsTenured= false, InstructorId=2
-                },
-                new Instructor()
-                {
-                    FirstName= "Jeanny", LastName= "Garcia", InstructorRank = Rank.AssistantProfessor, HiringDate = DateTime.Now, IsTenured= true, InstructorId=3
-                }
+        private readonly IMyFakeDataService _dummyData;
 
-            };
+        public InstructorController(IMyFakeDataService dummyData) //constructor
+        {
+            _dummyData = dummyData;
+        }
+
             public IActionResult Index()
             {
-                return View(InstructorsList);
+                return View(_dummyData.InstructorsList);
             }
             public IActionResult ShowDetail(int id)
             {
-                Instructor? instructor = InstructorsList.FirstOrDefault(st => st.InstructorId == id);
+                Instructor? instructor = _dummyData.InstructorsList.FirstOrDefault(st => st.InstructorId == id);
 
                 if(instructor != null)
                     return View(instructor);
@@ -42,13 +34,13 @@ namespace CalinaITELEC1C.Controllers
             [HttpPost]
             public IActionResult AddInstructor(Instructor newInstructor)
             {
-                InstructorsList.Add(newInstructor);
-                return View("Index", InstructorsList);
-            }
+                _dummyData.InstructorsList.Add(newInstructor);
+                return RedirectToAction("Index");
+        }
             [HttpGet]
             public IActionResult UpdateInstructor(int id)
             {
-                Instructor? instructor = InstructorsList.FirstOrDefault(st => st.InstructorId == id);
+                Instructor? instructor = _dummyData.InstructorsList.FirstOrDefault(st => st.InstructorId == id);
 
                 if (instructor != null)
                     return View(instructor);
@@ -58,7 +50,7 @@ namespace CalinaITELEC1C.Controllers
             [HttpPost]
             public IActionResult UpdateInstructor(Instructor InstructorChanges)
             {
-                Instructor? instructor = InstructorsList.FirstOrDefault(st => st.InstructorId == InstructorChanges.InstructorId);
+                Instructor? instructor = _dummyData.InstructorsList.FirstOrDefault(st => st.InstructorId == InstructorChanges.InstructorId);
                 if (instructor != null)
                 {
                     instructor.FirstName = InstructorChanges.FirstName;
@@ -67,7 +59,28 @@ namespace CalinaITELEC1C.Controllers
                     instructor.HiringDate = InstructorChanges.HiringDate;
                     instructor.IsTenured = InstructorChanges.IsTenured;
                 }
-                return View("Index", InstructorsList);
+                return RedirectToAction("Index");
+        }
+
+            [HttpGet]
+            public IActionResult Delete(int id)
+            {
+                Instructor? instructor = _dummyData.InstructorsList.FirstOrDefault(st => st.InstructorId == id);
+
+                if (instructor != null)
+                    return View(instructor);
+
+                return NotFound();
             }
+
+            [HttpPost]
+            public IActionResult Delete(Instructor InstructorDelete)
+            {
+                Instructor? instructor = _dummyData.InstructorsList.FirstOrDefault(st => st.InstructorId == InstructorDelete.InstructorId);
+                if (instructor != null)
+                    _dummyData.InstructorsList.Remove(instructor);
+
+                return RedirectToAction("Index");
+        }
     }
 }

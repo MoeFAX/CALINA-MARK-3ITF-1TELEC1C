@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MAC\\source\\repos\\CalinaITELEC1C\\CalinaITELEC1C\\CalinaITELEC1C.csproj",
+      "projectUniqueName": "D:\\GITHUBB\\CALINA-MARK-3ITF-1TELEC1C\\CalinaITELEC1C\\CalinaITELEC1C\\CalinaITELEC1C.csproj",
       "projectName": "CalinaITELEC1C",
-      "projectPath": "C:\\Users\\MAC\\source\\repos\\CalinaITELEC1C\\CalinaITELEC1C\\CalinaITELEC1C.csproj",
+      "projectPath": "D:\\GITHUBB\\CALINA-MARK-3ITF-1TELEC1C\\CalinaITELEC1C\\CalinaITELEC1C\\CalinaITELEC1C.csproj",
       "packagesPath": "C:\\Users\\MAC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MAC\\source\\repos\\CalinaITELEC1C\\CalinaITELEC1C\\obj\\",
+      "outputPath": "D:\\GITHUBB\\CALINA-MARK-3ITF-1TELEC1C\\CalinaITELEC1C\\CalinaITELEC1C\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MAC\\AppData\\Roaming\\NuGet\\NuGet.Config",
